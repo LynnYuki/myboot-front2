@@ -5,6 +5,7 @@ import router from './router'
 import store from './store'
 import config from '@/config/localstorageConfig.js'
 import VueStorage from 'vue-ls'
+import './core/lazy_use'
 
 
 Vue.config.productionTip = false
