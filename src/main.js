@@ -5,6 +5,8 @@ import router from './router'
 import store from './store'
 import config from '@/config/localstorageConfig.js'
 import VueStorage from 'vue-ls'
+
+import bootstrap from './core/bootstrap'
 import './core/lazy_use'
 
 
@@ -16,5 +18,6 @@ Vue.use(VueStorage,config.storageOptions)
 new Vue({
   router,
   store,
+  created:bootstrap,
   render: h => h(App)
 }).$mount('#app')

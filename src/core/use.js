@@ -8,11 +8,14 @@ import 'ant-design-vue/dist/antd.less'
 //其他组件
 import VueClipboard from 'vue-clipboard2'
 import PageLoading from '@/components/PageLoading'
+import PermissionHelper from '@/core/permission/permission'
+
 VueClipboard.config.autoSetContainer = true
 
 Vue.use(Antd)
 Vue.use(Viser)
 Vue.use(PageLoading)
 // Vue.use(MultiTab)
+Vue.use(PermissionHelper)
 Vue.use(VueCropper)
 process.env.NODE_ENV !== 'production' && console.warn('[lynnyuki] WARNING:  now use fulled imported.')
