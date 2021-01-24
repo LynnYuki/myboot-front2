@@ -13,11 +13,11 @@ import './core/lazy_use'
 Vue.config.productionTip = false
 
 
-Vue.use(VueStorage,config.storageOptions)
+Vue.use(VueStorage, config.storageOptions)
 
 new Vue({
   router,
   store,
-  created:bootstrap,
+  created: bootstrap,
   render: h => h(App)
 }).$mount('#app')

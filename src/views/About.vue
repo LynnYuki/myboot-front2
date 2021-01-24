@@ -7,20 +7,20 @@
 <script>
 import Home from './Home'
 export default {
-  name:'about',
-  components:{
+  name: 'about',
+  components: {
     Home
   },
   data() {
     return {
-      num:0
+      num: 0
     }
   },
   methods: {
     add() {
-      this.$dialog(Home,{
-        record:{},
-        on:{
+      this.$dialog(Home, {
+        record: {},
+        on: {
           ok() {
             console.log('ok 回调')
           },
@@ -30,15 +30,15 @@ export default {
           close() {
             console.log('close 回调')
           }
-          }
-        },
+        }
+      },
         {
-          titile:'新增',
-          width:700,
-          centered:true,
-          maskClosable:false
-      })
-      }
+          titile: '新增',
+          width: 700,
+          centered: true,
+          maskClosable: false
+        })
+    }
   }
 }
 </script>

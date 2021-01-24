@@ -5,7 +5,6 @@ export const APP_LANGUAGE = 'app_language'
 
 
 export const NAV_THEME = {
-    LIGHT: 'light',
-    DARK: 'dark'
-  }
-  
+  LIGHT: 'light',
+  DARK: 'dark'
+}

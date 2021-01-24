@@ -1,4 +1,6 @@
-import { mapState } from 'vuex'
+import {
+  mapState
+} from 'vuex'
 
 const deviceMixin = {
   computed: {
@@ -8,4 +10,6 @@ const deviceMixin = {
   }
 }
 
-export { deviceMixin }
+export {
+  deviceMixin
+}
