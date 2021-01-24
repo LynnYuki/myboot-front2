@@ -12,7 +12,6 @@ import './core/lazy_use'
 
 Vue.config.productionTip = false
 
-
 Vue.use(VueStorage, config.storageOptions)
 
 new Vue({

@@ -1,6 +1,6 @@
-const apiUrls = {
-  test1: '/sayHellow',
-  test2: '/sayHellow2'
+const api = {
+  test1: '/sayHello',
+  test2: '/sayHello2'
 
 }
 export default api

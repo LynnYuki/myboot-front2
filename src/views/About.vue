@@ -1,7 +1,8 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-    <a-button type="dashed" icon="plust" @click="add">Dialog</a-button>
+    <a-button type="dashed" icon="plus" @click="add">Dialog</a-button>
+    <a-button type="dashed" icon="plus" @click="hello">Hello</a-button>
   </div>
 </template>
 <script>
@@ -38,6 +39,9 @@ export default {
           centered: true,
           maskClosable: false
         })
+    },
+    hello() {
+      this.$api.get(helloWorld)
     }
   }
 }
