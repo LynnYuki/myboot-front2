@@ -6,7 +6,7 @@ import {
   TOGGLE_MULTI_TAB
 } from '@/store/mutation-types'
 import defaultSettings from '@/config/defaultSettings'
-export default function Initializer() {
+export default function Initializer () {
   store.commit('SET_TOKEN', storage.get(ACCESS_TOKEN))
   store.commit(TOGGLE_MULTI_TAB, storage.get(TOGGLE_MULTI_TAB, defaultSettings.multiTab))
   // store.dispatch('setLang',storage.get(APP_LANGUAGE,'zh-CH'))

@@ -16,7 +16,7 @@ const app = {
   mutations: {
     [TOGGLE_MULTI_TAB]: (state, bool) => {
       storage.set(TOGGLE_MULTI_TAB, bool)
-      state.multiTab = bool;
+      state.multiTab = bool
     },
     [APP_LANGUAGE]: (state, lang, antd = {}) => {
       state.lang = lang
@@ -26,7 +26,7 @@ const app = {
     [TOGGLE_MOBILE_TYPE]: (state, isMobile) => {
       state.isMobile = isMobile
     }
-  },
+  }
   // actions: {
   //     setLang ({ commit }, lang) {
   //       return new Promise((resolve, reject) => {
