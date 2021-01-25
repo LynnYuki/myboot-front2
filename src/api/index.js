@@ -1,4 +1,4 @@
-//将所有接口挂载到vue原型链上
+// 将所有接口挂载到vue原型链上
 
 import apis from './interface'
 
@@ -11,7 +11,7 @@ const install = Vue => {
 
   Object.defineProperties(Vue.prototype, {
     $api: {
-      get() {
+      get () {
         return apis
       }
     }
