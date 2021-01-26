@@ -79,7 +79,7 @@ export default {
       })
     },
     getZhiHuDaily () {
-      this.$request.get('http://news-at.zhihu.com/api/4/news/latest').then(res => {
+      this.$request.get('https://www.baidu.com').then(res => {
         if (res.data) {
           console.log(res.data)
         }

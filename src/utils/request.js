@@ -9,11 +9,11 @@ import {
   ACCESS_TOKEN
 } from '@/store/mutation-types'
 
-//创建axois实例
+// 创建axois实例
 const request = axios.create({
-  //API请求的默认地址
-  baseURL: process.env.NODE_ENV === 'production' ? process.env.VUE_APP_HOST : '/', // api 的 base_url
-  timeout: 1200000 //请求超时时间 2分钟
+  // API请求的默认地址
+  baseURL: process.env.NODE_ENV === 'production' ? process.env.VUE_APP_HOST : '/api', // api 的 base_url
+  timeout: 1200000 // 请求超时时间 2分钟
 })
 
 // 异常拦截处理器
@@ -63,7 +63,7 @@ request.interceptors.response.use((response) => {
 
 const installer = {
   vm: {},
-  install(Vue) {
+  install (Vue) {
     Vue.use(VueAxios, request)
   }
 }

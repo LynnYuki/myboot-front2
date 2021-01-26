@@ -3,7 +3,7 @@ module.exports = {
   outputDir: 'myboot-front2',
   lintOnSave: process.env.NODE_ENV !== 'development',
   productionSourceMap: false,
-  //开启less支持
+  // 开启less支持
   css: {
     loaderOptions: {
       less: {
@@ -14,7 +14,7 @@ module.exports = {
       }
     }
   },
-  //设置开发环境跨域代理，生产环境不生效
+  // 设置开发环境跨域代理，生产环境不生效
   devServer: {
     host: '0.0.0.0',
     port: '8088',
@@ -30,7 +30,7 @@ module.exports = {
       }
     }
   },
-  //打包去除console.log
+  // 打包去除console.log
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === 'production') {
       config.optimization.minimizer[0]
