@@ -1,11 +1,11 @@
 import Vue from 'vue'
-//基础组件库
+// 基础组件库
 import Antd from 'ant-design-vue'
 import Viser from 'viser-vue'
 import VueCropper from 'vue-cropper'
 import 'ant-design-vue/dist/antd.less'
 
-//其他组件
+// 其他组件
 import VueClipboard from 'vue-clipboard2'
 import PageLoading from '@/components/PageLoading'
 import PermissionHelper from '@/core/permission/permission'

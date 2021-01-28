@@ -9,7 +9,7 @@ const i18nMixin = {
     })
   },
   methods: {
-    setLang(lang) {
+    setLang (lang) {
       this.$store.dispatch('setLang', lang)
     }
   }

@@ -1,6 +1,6 @@
 import Modal from 'ant-design-vue/es/modal'
 export default (Vue) => {
-  function dialog(component, componentProps, modalProps) {
+  function dialog (component, componentProps, modalProps) {
     const _vm = this
     modalProps = modalProps || {}
     if (!_vm || !_vm._isVue) {
@@ -30,20 +30,20 @@ export default (Vue) => {
     }
 
     const dialogInstance = new Vue({
-      data() {
+      data () {
         return {
           visible: true
         }
       },
       router: _vm.$router,
       store: _vm.$store,
-      mounted() {
+      mounted () {
         this.$on('close', (v) => {
           this.handleClose()
         })
       },
       methods: {
-        handleClose() {
+        handleClose () {
           handle(this.$refs._component.onCancel, () => {
             this.visible = false
             this.$refs._component.$emit('close')
@@ -51,7 +51,7 @@ export default (Vue) => {
             dialogInstance.$destroy()
           })
         },
-        handleOk() {
+        handleOk () {
           handle(this.$refs._component.onOK || this.$refs._component.onOk, () => {
             this.visible = false
             this.$refs._component.$emit('close')
@@ -66,8 +66,10 @@ export default (Vue) => {
         if (modalModel) {
           delete modalProps.model
         }
+        // eslint-disable-next-line no-mixed-operators
         const ModalProps = Object.assign({}, modalModel && {
           model: modalModel
+        // eslint-disable-next-line no-mixed-operators
         } || {}, {
           attrs: Object.assign({}, {
             ...(modalProps.attrs || modalProps)
@@ -90,8 +92,10 @@ export default (Vue) => {
         if (componentModel) {
           delete componentProps.model
         }
+        // eslint-disable-next-line no-mixed-operators
         const ComponentProps = Object.assign({}, componentModel && {
           model: componentModel
+        // eslint-disable-next-line no-mixed-operators
         } || {}, {
           ref: '_component',
           attrs: Object.assign({}, {

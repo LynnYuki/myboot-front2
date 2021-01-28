@@ -17,12 +17,14 @@ const action = Vue.directive('action', {
     const actionName = binding.arg
     const roles = store.getters.roles
     const elVal = vnode.context.$route.meta.permission
+    // eslint-disable-next-line no-mixed-operators
     const permissionId = elVal instanceof String && [elVal] || elVal
     roles.permissions.forEach(p => {
       if (!permissionId.includes(p.permissionId)) {
         return
       }
       if (p.actionList && !p.actionList.includes(actionName)) {
+        // eslint-disable-next-line no-mixed-operators
         el.parentNode && el.parentNode.removeChild(el) || (el.style.display = 'none')
       }
     })
