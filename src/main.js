@@ -9,7 +9,7 @@ import axios from 'axios'
 import bootstrap from './core/bootstrap'
 import './core/lazy_use'
 import _ from 'lodash'
-
+import './utils/filter' // global filter
 import api from './api/index'
 Vue.prototype.$request = axios
 Vue.prototype.$debounce = _.debounce// 全局挂载防抖
