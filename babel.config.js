@@ -2,12 +2,12 @@ module.exports = {
   presets: [
     '@vue/cli-plugin-babel/preset'
   ],
-  plugins:[
+  plugins: [
     [
-      "import",{
-        libraryName:"ant-design-vue",
-        libraryDirectory:"es",
-        style:true
+      'import', {
+        libraryName: 'ant-design-vue',
+        libraryDirectory: 'es',
+        style: true
       }
     ],
     '@babel/plugin-transform-runtime',
