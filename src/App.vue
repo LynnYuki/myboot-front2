@@ -16,6 +16,11 @@ export default {
 }
 </script>
 <style lang="less">
+body{
+  padding: 0;
+  margin:0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -35,5 +40,52 @@ export default {
       color: #42b983;
     }
   }
+}
+
+//隐藏video标签的全部按钮
+
+//全屏按钮
+video::-webkit-media-controls-fullscreen-button{
+  display: none;
+}
+
+//播放按钮
+video::-webkit-media-controls-play-button{
+  display: none;
+}
+
+//进度条
+video::-webkit-media-controls-timeline{
+  display: none;
+}
+
+//观看的当前时间
+video::-webkit-media-controls-current-time-display{
+  display: none;
+}
+
+//剩余时间
+video::-webkit-media-controls-time-remaining-display{
+  display: none;
+}
+
+//音量按钮
+video::-webkit-media-controls-mute-button{
+  display: none;
+}
+
+video::-webkit-media-controls-toggle-closed-captions-button{
+  display:none;
+}
+
+
+//音量控制条
+video::-webkit-media-controls-volume-slider{
+  display: none;
+}
+
+//所有控件
+video::-webkit-media-controls-enclosure{
+  display: none;
 }
 </style>

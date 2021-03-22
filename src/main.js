@@ -18,6 +18,11 @@ Vue.config.productionTip = false
 Vue.use(api)// 全局挂载封装的api
 Vue.use(VueStorage, config.storageOptions)// 封装的localstorage
 
+
+import AOS from 'aos'//aos动效库
+
+AOS.init()
+
 new Vue({
   router,
   store,

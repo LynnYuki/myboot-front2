@@ -14,5 +14,11 @@ export default new Vuex.Store({
   modules: {
     app
   },
-  getters
+  getters,
+  plugins:[
+    createPersistedState({
+      storage:window.localStorage,
+      paths:['app','user']
+    })
+  ]
 })
